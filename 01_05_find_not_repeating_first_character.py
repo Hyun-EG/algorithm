@@ -3,14 +3,15 @@
 input = "abadabac"
 
 def find_not_repeating_first_character(string):
-    alphabet_index = [0]*29
-    print(alphabet_index)
-    for index in alphabet_index:
-        for char in string:
-            if not char.isalpha():
-                continue
-
-    return "_"
+    alphabet_occurrence_index = [0]*26
+    for char in string:
+        if not char.isalpha():
+            continue
+        alphabet_occurrence_index[ord(char)-97] += 1
+    for char in string:
+        if alphabet_occurrence_index[ord(char) - 97] == 1:
+            return char
+    return '_'
 
 
 result = find_not_repeating_first_character
