@@ -4,15 +4,26 @@ input = 20
 
 def find_prime_list_under_number(number):
     arr=[]
+
     for num in range(2,number+1):
-        is_prime = True
-        for i in range(2, int(num ** 0.5) + 1):
-            if(num % i)==0:
-                is_prime = False
+        for i in range(2, num):
+            if num % i == 0:
                 break
-        if is_prime:
+        else:
             arr.append(num)
     print(arr)
+
+
+    # 문제 해결 1
+    # for num in range(2,number+1):
+    #     is_prime = True
+    #     for i in range(2, int(num ** 0.5) + 1):
+    #         if(num % i)==0:
+    #             is_prime = False
+    #             break
+    #     if is_prime:
+    #         arr.append(num)
+    # print(arr)
 
 result = find_prime_list_under_number(input)
 print(result)
