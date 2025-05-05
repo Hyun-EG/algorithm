@@ -19,10 +19,9 @@ class LinkedList:
             print(cur.data)
             cur = cur.next
 
-linked_list = LinkedList(4) #head 5#head 5 #head 5#head 5
+linked_list = LinkedList(4)
 linked_list.append(12)
 linked_list.append(24)
 linked_list.print_all()
-
 
 
