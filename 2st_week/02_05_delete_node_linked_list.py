@@ -41,7 +41,18 @@ class LinkedList:
         prev_node.next = new_node
         new_node.next = next_node
 
+    # 링크드 리스트 해당 index의 원소 제거
+    def delete_node(self, index):
+        delete_index = self.get_node(index)
+        next_index = delete_index.next
+        if index == 0:
+            self.head = self.head.next
+            return
+        prev_index = self.get_node(index-1)
+        prev_index.next = next_index
+
 linked_list = LinkedList(5)
 linked_list.append(12)
 linked_list.add_node(0, 3)
+linked_list.delete_node(0)
 linked_list.print_all()
