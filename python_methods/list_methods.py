@@ -96,6 +96,12 @@ for zip_list_3,zip_list_4 in zip(zip_list_3, zip_list_4):
                                   # 현 hyun
 
 #list(map(int, input().split())) : 입력 받은 숫자를 list로 바꿔줌
-nums = list(map(int, input().split()))
-print(nums) # I : 345
+# nums = list(map(int, input().split()))
+#print(nums) # I : 345
             # O : [345]
+
+input = 12345
+list_input = list(str(input))
+map(int,list_input)
+list_input.reverse()
+print(list_input)
