@@ -18,4 +18,4 @@ def is_exist_target_number_binary(target, array):
 
 
 result = is_exist_target_number_binary(finding_target, finding_numbers)
-print(result)
+print(result) 
